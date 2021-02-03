@@ -1,0 +1,4 @@
+#!/bin/bash
+git add -A .
+git commit -m "first C"
+git push origin main
