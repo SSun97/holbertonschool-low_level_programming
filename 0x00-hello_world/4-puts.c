@@ -1,6 +1,10 @@
 #include <stdio.h>
 /**
- * This is main function, return 0
+ * main - This is main function
+ * @parameter There is no parameter
+ *
+ * section header
+ * Return: 0
  */
 
 int main(void)
