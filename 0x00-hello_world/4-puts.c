@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * This is main function, return 0
+ */
+
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
