@@ -1,14 +1,15 @@
 #include <stdio.h>
-
 /**
  *main - print 00 - 99 with comma
  *
  *Return: 0
 */
+
 int main(void)
 {
 	int i;
 	int j;
+
 	i = 48;
 
 	while (i < 58)
