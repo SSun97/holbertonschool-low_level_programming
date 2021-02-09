@@ -1,10 +1,5 @@
 #include "holberton.h"
-/**
- * print_alphabet - print alphabet
- * @void: no parameter
- *
- * Return: no return
-*/
+/* print_alphabet - print alphabet */
 
 void print_alphabet_x10(void)
 {
@@ -15,6 +10,7 @@ void print_alphabet_x10(void)
 	{
 		for (i = 'a'; i <= 'z'; i++)
 			_putchar(i);
+
 		_putchar('\n');
 	}
 }
