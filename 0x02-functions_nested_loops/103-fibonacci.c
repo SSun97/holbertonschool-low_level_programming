@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-	long int i, a1 = 1, a2 = 2, c;
+	long int i, a1 = 1, a2 = 2, c, sum = 0;
 
 	for (i = 0; i < 32; ++i)
 	{
@@ -14,15 +14,13 @@ int main(void)
 			break;
 		else if (a1 % 2 == 0)
 		{
-			printf("%lu", a1);
-			if (i < 31)
-			printf(", ");
+			sum = sum + a1;
 		}
 		c = a1 + a2;
 		a1 = a2;
 		a2 = c;
 	}
-	printf("\n");
+	printf("%lu\n", sum);
 
 
 	return (0);
