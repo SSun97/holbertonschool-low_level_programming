@@ -8,10 +8,10 @@ int main(void)
 {
 	unsigned long int i, a1 = 1, a2 = 2, c;
 
-	for (i = 0; i < 98; ++i)
+	for (i = 0; i < 100; ++i)
 	{
 		printf("%lu", a1);
-		if (i < 97)
+		if (i < 99)
 			printf(", ");
 		c = a1 + a2;
 		a1 = a2;
