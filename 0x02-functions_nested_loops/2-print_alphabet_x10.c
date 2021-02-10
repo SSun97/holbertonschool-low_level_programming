@@ -1,5 +1,7 @@
 #include "holberton.h"
-/* print_alphabet_x10 - print alphabet */
+/**
+ * print_alphabet_x10 - print alphabet
+*/
 
 void print_alphabet_x10(void)
 {
