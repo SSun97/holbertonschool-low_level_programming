@@ -8,14 +8,14 @@ int main(void)
 {
 	long int i, a1 = 1, a2 = 2, c;
 
-	for (i = 0; i < 26; ++i)
+	for (i = 0; i < 32; ++i)
 	{
 		if (a1 > 4000000)
 			break;
 		else if (a1 % 2 == 0)
 		{
 			printf("%lu", a1);
-			if (i < 25)
+			if (i < 31)
 			printf(", ");
 		}
 		c = a1 + a2;
