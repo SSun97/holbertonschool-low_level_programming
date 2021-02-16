@@ -6,6 +6,8 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+	if (dest == NULL)
+		return (NULL);
 	int i;
 
 	*dest = *src;
