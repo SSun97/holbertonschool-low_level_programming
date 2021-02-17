@@ -11,6 +11,18 @@ int _atoi(char *s)
 	int i = 0;
 	unsigned int digit;
 	int sign = 1;
+	char *c = s;
+
+	while (*c != '\0')
+	{
+		if (*c < '0' || *c > '9')
+			c++;
+		else
+			break;
+	}
+	if (*c == '\0')
+		return (i);
+
 
 	while (*p < '0' || *p > '9')
 	{
