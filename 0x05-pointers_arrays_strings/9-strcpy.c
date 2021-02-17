@@ -5,21 +5,18 @@
  * Return: dest
  */
 char *_strcpy(char *dest, char *src)
-{	
-	int i;
-	
-	if (dest == '\0')
-		return ('\0');
+{
+	char *p = dest;
 
-	*dest = *src;
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
 
-	for (i = 0; *(src + i) != '\0'; i++)
-		*(dest + i) = *(src + i);
-	*(dest + i + 1) = '\0';
-
-
-
-	return (dest);
+	return (p);
 }
 
 
