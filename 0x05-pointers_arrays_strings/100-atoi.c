@@ -13,19 +13,16 @@ int _atoi(char *s)
 	int sign = 1;
 
 	while (*p < '0' || *p > '9')
-	{
-		if (*p == '-')
-		{
-			sign = sign * (-1);
-		}
 		p += 1;
-	}
 
 	for ( ; ; p += 1)
 	{
+		if (*(p - 1) == '-')
+			sign == -1;
 		digit = *p - '0';
 		if (digit > 9)
 			break;
+
 		i = 10 * i + digit;
 
 	}
