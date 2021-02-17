@@ -18,7 +18,7 @@ int _atoi(char *s)
 	for ( ; ; p += 1)
 	{
 		if (*(p - 1) == '-')
-			sign == -1;
+			sign = -1;
 		digit = *p - '0';
 		if (digit > 9)
 			break;
