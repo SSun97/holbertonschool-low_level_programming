@@ -5,10 +5,11 @@
  * Return: dest
  */
 char *_strcpy(char *dest, char *src)
-{
-	if (dest == NULL)
-		return (NULL);
+{	
 	int i;
+	
+	if (dest == '\0')
+		return ('\0');
 
 	*dest = *src;
 

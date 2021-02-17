@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-    char s1[10];
+    char s1[98];
     char *p;
 
     p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
