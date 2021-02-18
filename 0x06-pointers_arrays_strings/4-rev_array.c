@@ -17,7 +17,9 @@ void reverse_array(int *a, int n)
 	{
 		*p = *p ^ *q;
 		*q = *p ^ *q;
-		*p = *p++ ^ *q--;
+		*p = *p ^ *q;
+		p++;
+		q--;
 	}
 
 }
