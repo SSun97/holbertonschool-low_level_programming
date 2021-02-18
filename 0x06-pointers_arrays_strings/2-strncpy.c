@@ -25,7 +25,7 @@ char *_strncpy(char *dest, char *src, int n)
 		*x++ = *y++;
 		i++;
 	}
-	if (j < n)
+	if (j <= n)
 		*x = '\0';
 
 	return (dest);
