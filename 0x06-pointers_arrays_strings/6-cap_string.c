@@ -24,9 +24,16 @@ int _ismark(char b)
 
 char *cap_string(char *s)
 {
-	char *a;
+	char *a, *c;
 
+	c = s;	
 	a = s;
+	while (*c != '\0')
+	{
+		if (*c == '\t')
+			*c = ' ';
+		c++;
+	}
 
 	while (*a != '\0')
 	{
