@@ -27,7 +27,7 @@ int _ismark(char b)
 
 char *cap_string(char *s)
 {
-	char *a, *c;
+	char *a;
 
 	a = s;
 	while (*a != '\0')
