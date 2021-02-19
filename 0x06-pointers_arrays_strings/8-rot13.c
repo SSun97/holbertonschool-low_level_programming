@@ -24,19 +24,22 @@ char *rot13(char *a)
 			'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 			 'J', 'K', 'L', 'M'};
 	int i;
-	char *p;
+	char *u;
 
-	p = a;
+	u = a;
 
-	while (*p != '\0')
+	while (*u != '\0')
 	{
 
 		for (i = 0; i < 52; i++)
 		{
-			if (*p == e[i])
-				*p = l[i];
+			if (*u == e[i])
+			{
+				*u = l[i];
+				break;
+			}
 		}
-		p++;
+		u++;
 	}
 	return (a);
 }
