@@ -32,6 +32,9 @@ char *cap_string(char *s)
 	char *a;
 
 	a = s;
+	if (*a >= 'a' && *a <= 'z')
+		*a = *a - 32; 
+
 	while (*a != '\0')
 	{
 		if (_ismark(*a))
