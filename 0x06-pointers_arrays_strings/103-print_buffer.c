@@ -25,9 +25,9 @@ void print_buffer(char *b, int size)
 				printf("  ");
 			else
 				printf("%02x", *p);
-			if (j % 9 == 0)
-				printf(" ");
 		}
+		printf(" ");
+
 		for (j = 0; j < 10; j++, q++)
 		{
 			if (*q >= 32 && *q <= 122)
