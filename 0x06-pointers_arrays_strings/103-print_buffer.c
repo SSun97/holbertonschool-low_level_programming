@@ -12,7 +12,7 @@ void print_buffer(char *b, int size)
 
 	p = b;
 	q = b;
-	for (i = 0, a = 0; i < (size-1) / 10 + 1; i++, a = a + 10)
+	for (i = 0, a = 0; i < (size - 1) / 10 + 1; i++, a = a + 10)
 	{
 		printf("%08x:", a);
 
