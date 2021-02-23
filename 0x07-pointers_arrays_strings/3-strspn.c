@@ -7,18 +7,16 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char *p;
-	unsigned int n = 0;
+	char c, *p, *s1;
 
-	for ( ; *s; s++, n++)
-	{
-		for (p = accept; *p && (*p != *s); s++)
-		{
+	for (s1 = s, c = *s1; c != 0; s1++, c = *s1) {
+		for (p = accept; *p != 0; p++) {
+			if (c == *p) {
+				goto next;
+			}
 		}
-		if (*s == '\0')
-			return (n);
+		break;
+	next:;
 	}
-
-	return (n);
-
+	return (s1 - s);
 }
