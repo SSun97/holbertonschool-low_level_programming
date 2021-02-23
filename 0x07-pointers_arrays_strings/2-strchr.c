@@ -6,17 +6,11 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *p;
+	do {
 
-	p = s;
-	if (*p == c)
+	if (*s == c)
 		return (s);
-	while (*p != c)
-	{
-		if (*p == '\0')
-			break;
-		p++;
-	}
+	} while (*s++);
 
-	return (p);
+	return (0);
 }
