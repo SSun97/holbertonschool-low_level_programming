@@ -11,9 +11,9 @@ char *_strchr(char *s, char c)
 	p = s;
 	while (*p != c)
 	{
-		p++;
 		if (*p == '\0')
 			break;
+		p++;
 	}
 
 	return (p);
