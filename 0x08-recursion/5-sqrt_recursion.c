@@ -1,6 +1,7 @@
 /**
  * _sqrt_recursion - get the squar root of n;
  * @n: type int
+ * @s: type int
  * Return: n
  */
 int sqrts(int n, int s);
@@ -23,6 +24,7 @@ int _sqrt_recursion(int n)
 int sqrts(int n, int s)
 {
 	int sqr = s * s;
+
 	if (sqr == n)
 		return (s);
 	if (sqr > n)
