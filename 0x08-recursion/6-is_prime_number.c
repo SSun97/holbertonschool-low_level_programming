@@ -1,29 +1,34 @@
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * pr - check if n is prime
+ * @n: type int
+ * @a: type int
+ * Return: 1 if it is prime, otherwise 0
  */
 
-int _pow_recursion(int x, int y)
+int pr(int n, int a)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
+	if (a < n)
+	{
+		if ((n % a) == 0)
+			return (0);
+		else
+			return (pr(n, a + 1));
+}
+	else
 		return (1);
-	x = x * _pow_recursion(x, --y);
 
-	return (x);
 }
 
 
-
+/**
+ * is_prime_number - check if n is prime
+ * @n: type int
+ * Return: pr
+ */
 
 int is_prime_number(int n)
 {
-	if (n % 2 == 0)
+	if (n <= 1)
 		return (0);
-
-
-
-
-      }
+	return (pr(n, 2));
+}
