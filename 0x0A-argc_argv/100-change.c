@@ -14,10 +14,15 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 
 	r = atoi(argv[1]);
+	if (r < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	c25 = r / 25;
 	c10 = (r - (25 * c25)) / 10;
 	c5 = (r - (25 * c25) - (10 * c10)) / 5;
