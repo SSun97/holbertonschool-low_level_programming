@@ -39,15 +39,23 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
+	if (s2 == NULL && s1 == NULL)
 	{
-		p[i] = s1[i];
+		p[0] = '\0';
+		return (p);
 	}
-	if (s2 == NULL)
-		p[i + 1] = '\0';
-	for (j = 0; j <= len2; j++)
-		p[i + j] = s2[j];
-
+	if (s2 == NULL && s1 != NULL)
+	{
+		for (i = 0; i <= len1; i++)
+			p[i] = s1[i];
+		return (p);
+	}
+	else
+	{
+		for (i = 0; i < len1; i++)
+			p[i] = s1[i];
+		for (j = 0; j <= len2; j++)
+			p[i + j] = s2[j];
+	}
 	return (p);
-
 }
