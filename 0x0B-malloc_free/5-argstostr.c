@@ -1,41 +1,53 @@
 #include <stdlib.h>
+/**
+ * _strlen - length of a string
+ * @s: type char *
+ * Return: int
+*/
 
 int _strlen(char *s)
 {
 	int i;
+
 	for (i = 0; *s != '\0'; i++)
 		s++;
 	return (i);
 
 }
 
-
-
-
-/*n - check the code for Holberton School students.
- *
- * Return: Always 0.
+/**
+ * argstostr - check the code for Holberton School students.
+ * @ac: type int
+ * @av: type char **
+ * Return: char * or NULL
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
-	char *p, *c;
+	int i, j, totallen = 0, z = 0;
+	char *p;
 
-	for (i = 0; i < ac - 1; i++)
-		totallen = totallen + 1 + _strlen(av[i])
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-	p = malloc(totallen);
-	c = p;
+	for (i = 0; i < ac; i++)
+		totallen = totallen + 1 + _strlen(av[i]);
 
-	for (i = 0; i < ac - 1; i++)
+	p = malloc(totallen + 1);
+	if (p == NULL)
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < _strlen(av[i]); j++)
-		*(c + j) = av[j];
-		*(c + j + 1) = ' ';
-		c = c + j + 1;
+		{
+			p[z] = av[i][j];
+			z++;
+		}
+		p[z]  = '\n';
+		z++;
 
 	}
-	*c = '\0';
+	p[z] = '\0';
 
 	return (p);
 
