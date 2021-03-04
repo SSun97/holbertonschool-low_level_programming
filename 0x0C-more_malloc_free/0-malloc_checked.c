@@ -1,8 +1,8 @@
 #include <stdlib.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * malloc_checked - allocate the space
+ * @b:unsigned int
+ * Return: type void pointer.
  */
 void *malloc_checked(unsigned int b)
 {
