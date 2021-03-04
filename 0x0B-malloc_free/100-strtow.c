@@ -43,7 +43,7 @@ char **strtow(char *str)
 	c = str;
 	d = c;
 
-	if (str == NULL || *str == '\0' || *str == ' ')
+	if (str == NULL || *str == '\0' || (*str == ' ' && *(str + 1) == '\0'))
 		return (NULL);
 
 	p = (char **)malloc(num_of_words(str) * sizeof(char *));
