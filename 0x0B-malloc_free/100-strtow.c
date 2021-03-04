@@ -9,7 +9,7 @@ int num_of_words(char *s)
 {
 	int i, n = 0;
 
-	if (*s != ' ')
+	if (*s != ' ' && *(s + 1) != '\0')
 		n = 1;
 
 	for (i = 0; *s != '\0'; i++)
