@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * num_of_words - count how many words in a string
+ * num_of_words - count how many words in a string.
  * @s: type char *
  * Return: type int
  */
@@ -43,7 +43,7 @@ char **strtow(char *str)
 	c = str;
 	d = c;
 
-	if (str == NULL || *str == "" || *str == " ")
+	if (str == NULL || *str == '\0' || *str == ' ')
 		return (NULL);
 
 	p = (char **)malloc(num_of_words(str) * sizeof(char *));
