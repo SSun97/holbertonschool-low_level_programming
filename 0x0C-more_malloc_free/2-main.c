@@ -40,7 +40,7 @@ int main(void)
 {
     char *a;
 
-    a = _calloc(0, 4);
+    a = _calloc(98, sizeof(char));
     strcpy(a, "Holberton");
     strcpy(a + 9, " School! :)\n");
     a[97] = '!';
