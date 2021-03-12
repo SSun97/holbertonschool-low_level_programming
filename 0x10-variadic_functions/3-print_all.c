@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-
 /**
  * print_all - print all elements
  * @format: const char * const
@@ -41,9 +40,9 @@ void print_all(const char * const format, ...)
 		default:
 			break;
 		}
-		if (*(format + x) != '\0' || (*(format + x - 1) != 'c'
-				&& *(format + x - 1) != 'i' &&
-				*(format + x - 1) != 'f' && *(format + x - 1) != 's'))
+		if (*(format + x) != '\0' && (*(format + x - 1) == 'c'
+				|| *(format + x - 1) == 'i' ||
+				*(format + x - 1) == 'f' || *(format + x - 1) == 's'))
 			printf(", ");
 	}
 	printf("\n");
