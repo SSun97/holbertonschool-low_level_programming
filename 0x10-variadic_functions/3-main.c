@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("cefssi", 'H', 0, "lberton", "", 0);
+    print_all("cefssbbbbbsc", 'H', 3.3f, "lberton", "", "",'H');
     return (0);
 }
