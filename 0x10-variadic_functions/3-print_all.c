@@ -9,7 +9,7 @@ void print_all(const char * const format, ...)
 {
 	va_list p;
 	int i, x = 0;
-	float f;
+	double f;
 	char *str;
 
 	va_start(p, format);
@@ -45,5 +45,6 @@ void print_all(const char * const format, ...)
 				*(format + x - 1) == 'f' || *(format + x - 1) == 's'))
 			printf(", ");
 	}
+	va_end(p);
 	printf("\n");
 }
