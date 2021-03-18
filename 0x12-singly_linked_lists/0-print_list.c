@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
+ * print_list - Print the link list
+ * @h: the pointer of node passed in
+ * Return: the number of nodes on the list
  *
  */
 int print_list(list_t *h)
