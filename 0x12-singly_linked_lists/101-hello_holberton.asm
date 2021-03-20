@@ -1,18 +1,16 @@
 section .data
-fmt     db "%u %s",10,0
-msg1    db "Hello, Holberton",0
 
-    section .text
-    extern printf
-    global main
+	message db "Hello, Holberton", 10
 
+section .text
+global main
 main:
-    mov  edx, msg1
-    mov  esi, 1
-    mov  edi, fmt
-    mov  eax, 0
-    call printf
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, message
+	mov rdx, 17
+	syscall
 
-    mov  ebx, 0     ; return valu
-    mov  eax, 1
-    int 0x80
+	mov rax, 60
+	mov rdi, 0
+	syscall
