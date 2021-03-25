@@ -10,9 +10,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int i, z = 0;
 	unsigned long int xor, a = 1;
 
-	if (n == m)
-		return (0);
-
 	xor = n ^ m;
 	for (i = 0; i < 64; i++)
 	{
