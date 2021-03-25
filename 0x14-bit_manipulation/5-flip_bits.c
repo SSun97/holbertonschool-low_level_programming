@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		return (0);
 
 	xor = n ^ m;
-	for (i = 0; i < 63; i++)
+	for (i = 0; i < 64; i++)
 	{
 		if ((xor & (a << i)) > 0)
 			z++;
