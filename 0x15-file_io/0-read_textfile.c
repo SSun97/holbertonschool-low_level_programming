@@ -18,12 +18,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDONLY, 2);
 
 	if (fd == -1)
 		return (0);
 
-	buf = malloc(letters + 1);
+	buf = malloc(letters);
 	j = read(fd, buf, letters);
 		if (j == (-1))
 		{
@@ -34,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; i <= letters && buf[i] != '\0'; i++)
 	{
-		j = _putchar(buf[i]);
+		j = write(STDIN_FILENO, buf + i, 1);
 			if (j == (-1))
 			{
 				close(fd);
