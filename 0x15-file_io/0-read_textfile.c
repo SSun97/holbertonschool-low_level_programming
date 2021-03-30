@@ -2,7 +2,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include "holberon.h"
+#include "holberton.h"
 /**
  * read_textfile - read the whole file and print to the std output
  * @filename: type char *
