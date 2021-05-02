@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def island_perimeter(grid):
-    '''
-       The function that calculate the perimeter of an island
-    '''
+    ''' The function that calculate the perimeter of an island '''
     perimeter = 0
     adjacents = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     for i in range(len(grid)):
