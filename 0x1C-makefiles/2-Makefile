@@ -1,0 +1,10 @@
+CC:=gcc 
+SRC:=main.c holberton.c
+# OBJ:=main.o holberton.o
+OBJ:=$(SRC:.c=.o)
+# OBJ:=$(patsubst %.c,%.o,$(SRC))
+NAME:=holberton
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+clean:
+	rm -rf *.o holberton
