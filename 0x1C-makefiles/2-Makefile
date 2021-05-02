@@ -1,9 +1,9 @@
-CC:=gcc 
-SRC:=main.c holberton.c
+CC=gcc 
+SRC=main.c holberton.c
 # OBJ:=main.o holberton.o
-OBJ:=$(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 # OBJ:=$(patsubst %.c,%.o,$(SRC))
-NAME:=holberton
+NAME=holberton
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
