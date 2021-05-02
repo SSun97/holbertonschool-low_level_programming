@@ -6,7 +6,7 @@ def island_perimeter(grid):
     ''' The function that calculate the perimeter of an island '''
 
     perimeter = 0
-    if grid is None:
+    if grid is None or grid[0] is None:
         return 0
     else:
         adjacents = [(-1, 0), (1, 0), (0, -1), (0, 1)]
