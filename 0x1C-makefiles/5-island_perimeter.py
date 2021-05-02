@@ -5,6 +5,7 @@
 def island_perimeter(grid):
     ''' The function that calculate the perimeter of an island '''
 
+
     perimeter = 0
     if grid is None or grid[0] is None:
         return 0
