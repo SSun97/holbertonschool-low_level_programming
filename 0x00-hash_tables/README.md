@@ -1,5 +1,5 @@
-0x00. C - Hash tables
 
+0x00. C - Hash tables
 =====================
 
 Resources
@@ -103,7 +103,7 @@ Write a function that creates a hash table.
     *   where `size` is the size of the array
 *   Returns a pointer to the newly created hash table
 *   If something went wrong, your function should return `NULL`
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 0-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -149,7 +149,7 @@ Write a function that creates a hash table.
     ==7602== For counts of detected and suppressed errors, rerun with: -v
     ==7602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
     julien@ubuntu:~/0x00. Hash tables$
-    
+```   
 
 **Repo:**
 
@@ -166,7 +166,7 @@ Write a hash function implementing the djb2 algorithm.
 
 *   Prototype: `unsigned long int hash_djb2(const unsigned char *str);`
 *   You are allowed to copy and paste the function from [this page](/rltoken/wTa7EkijQJc2uhQAuP9Nvw "this page")
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 1-djb2.c 
     unsigned long int hash_djb2(const unsigned char *str)
     {
@@ -211,7 +211,7 @@ Write a hash function implementing the djb2 algorithm.
     5861846
     julien@ubuntu:~/0x00. Hash tables$ 
     
-
+```
 **Repo:**
 
 *   GitHub repository: `holbertonschool-low_level_programming`
@@ -231,7 +231,7 @@ Write a function that gives you the index of a key.
 *   This function should use the `hash_djb2` function that you wrote earlier
 *   Returns the index at which the key/value pair should be stored in the array of the hash table
 *   You will have to use this hash function for all the next tasks
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 2-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -269,7 +269,7 @@ Write a function that gives you the index of a key.
     5861846
     470
     julien@ubuntu:~/0x00. Hash tables$ 
-    
+```   
 
 **Repo:**
 
@@ -290,7 +290,7 @@ Write a function that adds an element to the hash table.
     *   and `value` is the value associated with the key. `value` must be duplicated. `value` can be an empty string
 *   Returns: `1` if it succeeded, `0` otherwise
 *   In case of collision, add the new node at the beginning of the list
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 3-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -312,7 +312,7 @@ Write a function that adds an element to the hash table.
     }
     julien@ubuntu:~/0x00. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c -o d
     julien@ubuntu:~/0x00. Hash tables$
-    
+```
 
 If you want to test for collisions, here are some strings that collide using the djb2 algorithm:
 
@@ -340,7 +340,7 @@ Write a function that retrieves a value associated with a key.
     *   where `ht` is the hash table you want to look into
     *   and `key` is the key you are looking for
 *   Returns the value associated with the element, or `NULL` if `key` couldn’t be found
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 4-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -396,7 +396,7 @@ Write a function that retrieves a value associated with a key.
     c:isfun
     javascript:(null)
     julien@ubuntu:~/0x00. Hash tables$ 
-    
+```    
 
 **Repo:**
 
@@ -416,7 +416,7 @@ Write a function that prints a hash table.
     *   Order: array, list
 *   Format: see example
 *   If `ht` is NULL, don’t print anything
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 5-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -449,7 +449,7 @@ Write a function that prints a hash table.
     {}
     {'Betty': 'Holberton', 'python': 'awesome', 'Bob': 'and Kris love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Asterix': 'Obelix'}
     julien@ubuntu:~/0x00. Hash tables$ 
-    
+```   
 
 **Repo:**
 
@@ -465,7 +465,7 @@ Write a function that deletes a hash table.
 
 *   Prototype: `void hash_table_delete(hash_table_t *ht);`
     *   where `ht` is the hash table
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 6-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -525,7 +525,7 @@ Write a function that deletes a hash table.
     ==6621== For counts of detected and suppressed errors, rerun with: -v
     ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
     julien@ubuntu:~/0x00. Hash tables$ 
-    
+```  
 
 **Repo:**
 
@@ -548,7 +548,7 @@ For this task, please:
 *   Read [PHP Internals Book: HashTable](/rltoken/6sW4hlWN3Srg5v6cvMLZUA "PHP Internals Book: HashTable")
 *   Use the same hash function
 *   Use these data structures:
-
+```
     /**
      * struct shash_node_s - Node of a sorted hash table
      *
@@ -585,7 +585,7 @@ For this task, please:
          shash_node_t *shead;
          shash_node_t *stail;
     } shash_table_t;
-    
+```  
 
 Rewrite the previous functions using these data structures:
 
@@ -600,7 +600,7 @@ Rewrite the previous functions using these data structures:
     *   Should print the hash tables key/value pairs in reverse order using the sorted linked list
 *   `void shash_table_delete(shash_table_t *ht);`
 *   You are allowed to have more than 5 functions in your file
-
+```
     julien@ubuntu:~/0x00. Hash tables$ cat 100-main.c 
     #include <stdlib.h>
     #include <string.h>
@@ -649,7 +649,7 @@ Rewrite the previous functions using these data structures:
     {'a': '6', 'b': '3', 'c': '2', 'j': '1', 'm': '7', 'n': '5', 'y': '0', 'z': '4'}
     {'z': '4', 'y': '0', 'n': '5', 'm': '7', 'j': '1', 'c': '2', 'b': '3', 'a': '6'}
     julien@ubuntu:~/0x00. Hash tables$ 
-    
+```
 
   
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/253/php.png)
