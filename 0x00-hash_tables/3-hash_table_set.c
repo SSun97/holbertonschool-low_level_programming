@@ -32,21 +32,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[hash_index] = node;
     return (1);
 
-  oldhead = ht->array[hash_index];
-  for (tmp = oldhead; tmp != NULL; tmp = tmp->next)
-  {
-    if (strcmp(key, tmp->key) == 0)
-    {
-      free(tmp->value);
-      tmp->value = strdup(value);
-      free(node->value);
-      free(node);
-      return (1);
-    }
-  }
-  node->next = oldhead;
-  ht->array[hash_index] = node;
-
-  return (1);
+	if (ht->array[hash_index] == NULL)
+		ht->array[hash_index] = node;
+	else
+	{
+		oldhead = ht->array[hash_index];
+		for (tmp = oldhead; tmp != NULL; tmp = tmp->next)
+		{
+			if (strcmp(key, tmp->key) == 0)
+			{
+				free(tmp->value);
+				tmp->value = strdup(value);
+				free(node->value);
+				free(node);
+				return (1);
+			}
+		}
+		node->next = oldhead;
+		ht->array[hash_index] = node;
+	}
+	return (1);
 }
 
