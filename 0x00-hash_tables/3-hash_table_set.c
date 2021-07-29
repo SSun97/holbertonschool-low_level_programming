@@ -30,10 +30,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht->array[hash_index] == NULL)
 		ht->array[hash_index] = node;
-    return (1);
-
-	if (ht->array[hash_index] == NULL)
-		ht->array[hash_index] = node;
 	else
 	{
 		oldhead = ht->array[hash_index];
@@ -53,4 +49,3 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
-
